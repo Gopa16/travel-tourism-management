@@ -1,0 +1,108 @@
+<html>
+<head>
+    <title>Travel and Tourist Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #74ebd5, #ACB6E5);
+            margin: 0;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #00695c;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            width: 50%;
+            margin: auto;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="password"],
+        select {
+            width: 95%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 10px 20px;
+            background-color: #0077b6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #0077b6;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Travel and Tourist Management Registration</h1>
+
+    <form method="post" action="Registration">
+        <table border="0">
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" name="name" placeholder="Type Your Name"></td>
+            </tr>
+            <tr>
+                <td>Email Id:</td>
+                <td><input type="text" name="email" placeholder="Type Your email id"></td>
+            </tr>
+            <tr>
+                <td>Contact no:</td>
+                <td><input type="tel" name="contact" placeholder="Type Your contact no"></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="password"></td>
+            </tr>
+            <tr>
+                <td>Confirm Password:</td>
+                <td><input type="password" name="confirm"></td>
+            </tr>
+            <tr>
+                <td>Security Question:</td>
+                <td>
+                    <select name="security">
+                        <option value="null">Select</option>
+                        <option value="Pet_name">Pet Name</option>
+                        <option value="Birthday">Birthday</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Answer:</td>
+                <td><input type="text" name="answer"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Click"></td>
+                <td><input type="reset" value="Refresh"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

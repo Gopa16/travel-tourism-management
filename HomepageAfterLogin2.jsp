@@ -1,0 +1,187 @@
+<%@ page session="true" %>
+<%
+    String name = (String) session.getAttribute("name");
+    if (name == null || name.trim().isEmpty()) {
+        name = "Guest";
+    }
+%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Travel & Tourism </title>
+  <style>
+    
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #0077b6;
+      padding: 10px 20px;
+      color: white;
+    }
+    .navbar .brand {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    .navbar .links {
+      display: flex;
+      gap: 15px; /* Minimal space between links */
+    }
+    .navbar .links a {
+      color: white;
+      text-decoration: none;
+      font-size: 1em;
+    }
+    .navbar .links a:hover {
+      text-decoration: underline;
+    }
+       .nav-container {
+      display: flex;
+      background-color: #f0f0f0;
+      padding: 10px 20px;
+      gap: 20px; /* spacing between items */
+      justify-content: space-between;
+    }
+
+    .nav-container div a {
+      text-decoration: none;
+      /* color: #0077b6; */
+      color: black;
+      font-weight: bold;
+      font-size: 1em;
+    }
+
+    .nav-container div a:hover {
+      text-decoration: underline;
+    }
+   body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url("images/beachwalpaper.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  
+}
+.mid{
+    
+    margin-top: 100px;   /* Moves it lower */
+  margin-left: 550px;  /* Moves it to the right */
+  /* text-decoration: ; */
+
+}
+.mid button {
+  background-color: #7fcef9;
+  color: black;
+  border-radius: 25px; /* or use 50% for circular buttons */
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.places1{
+     margin-top: 80px;   /* Moves it lower */
+  /* margin-left: 550px;  */ 
+}
+.places-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 20px;                             /* Equal spacing between items */
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.place img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.place p {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 8px;
+  color: #333;
+}
+
+.more-button {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.more-button a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0078D4;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+  </style>
+</head>
+<body >
+
+  <div class="navbar">
+    <div class="brand">Travel & Tourism</div>
+    <div class="links">
+<!--      <a href="#">Admin</a>-->
+<!--      <a href="Login.html">Login</a>-->
+    <%= name %> 
+    </div>
+  </div>
+<div class="nav-container">
+    <div><a href="#">Destination</a></div>
+    <div><a href="#">Flight</a></div>
+    <div><a href="#">Trains</a></div>
+    <div><a href="#">Hotels</a></div>
+    <div><a href="#">About us</a></div>
+</div>
+<div class="mid">
+<h1>Your Journey Begins Here</h1>
+<p>Unlock your next adventure with us. <br> We believe travel is more 
+    than just seeing new places; <br>it's about discovering new 
+    perspectives and creating lifelong memories.</p>
+    <button>Know more</button>
+    <button>Book Now</button>
+    </div>
+<div class="places1">
+        <h3><center>Places to visit</center> </h3>    
+</div>
+<div class="places-grid">
+  <div class="place">
+    <a href="webpage1">
+      <img src="Taj.jpeg" alt="Taj Mahal">
+      <p>TAJ MAHAL</p>
+    </a>
+  </div>
+  <div class="place">
+    <a href="webpage2">
+      <img src="images/Gateway-of-India.webp" alt="Gateway of India">
+      <p>GATEWAY</p>
+    </a>
+  </div>
+  <div class="place">
+    <a href="webpage3">
+      <img src="images/jaipur.jpeg" alt="Jaipur">
+      <p>JAIPUR</p>
+    </a>
+  </div>
+  <div class="place">
+    <a href="webpage4">
+      <img src="images/Darjeeling.jpg" alt="Darjeeling">
+      <p>DARJEELING</p>
+    </a>
+  </div>
+</div>
+
+<div class="more-button">
+  <a href="more.html">More</a>
+</div>
+</body>
+</html>
